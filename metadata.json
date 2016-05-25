@@ -7,8 +7,20 @@
   "source": "https://github.com/jonatanmenghetti/puppet-bind",
   "issues_url": "https://github.com/jonatanmenghetti/puppet-bind/issues",
   "project_page": "https://github.com/jonatanmenghetti/puppet-bind",
+  "data_provider": "hiera",
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [ "7.7" ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [ "6", "7" ]
+    }
+  ],
   "dependencies": [
     {"version_requirement":">= 1.0.0","name":"puppetlabs-stdlib"},
-    {"name":"puppetlabs/concat","version_requirement":">= 1.2.4"}
+    {"name":"puppetlabs/concat","version_requirement":">= 1.2.4"},
+    {"name": "ripienaar/module_data", "version_requirement": ">=0.0.3" }
   ]
 }
