@@ -1,0 +1,6 @@
+---
+bind::defaults::supported: false
+bind::defaults::random_device: '/dev/random'
+
+bind::forwarders: ''
+bind::version: ''
