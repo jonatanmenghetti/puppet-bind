@@ -1,0 +1,10 @@
+---
+bind::defaults::supported: true
+bind::defaults::bind_user: 'named'
+bind::defaults::bind_group: 'named'
+bind::defaults::bind_package: 'bind'
+bind::defaults::bind_service: 'named'
+bind::defaults::confdir: '/etc/named'
+bind::defaults::namedconf: '/etc/named.conf'
+bind::defaults::cachedir: '/var/named'
+bind::defaults::default_zones_warning: true
