@@ -1,6 +1,6 @@
 ---
 version: 4
-datadir: defaults
+datadir: data
 hierarchy:
   - name : "Os family"
     backend: yaml
