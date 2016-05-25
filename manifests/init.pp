@@ -2,7 +2,7 @@
 #
 # Currently does nothing
 #
-class dns(
+class bind(
   $forwarders             = '',
   $dnssec                 = false,
   $version                = '',
@@ -19,6 +19,48 @@ class dns(
   file { "${confdir}/zones":
     ensure  => directory,
     mode    => '2755',
+  }
+
+  file { $namedconf:
+    content => template('bind/named.conf.erb'),
+  }
+
+  concat { [
+    "${confdir}/acls.conf",
+    "${confdir}/keys.conf",
+    "${confdir}/views.conf",
+    ]:
+    owner   => 'root',
+    group   => $bind_group,
+    mode    => '0644',
+    require => Package['bind'],
+    notify  => Service['bind'],
+  }
+
+  concat::fragment { 'named-acls-header':
+    order   => '00',
+    target  => "${confdir}/acls.conf",
+    content => "# This file is managed by puppet - do not change! All changes will be lost\n",
+  }
+
+  concat::fragment { 'named-keys-header':
+    order   => '00',
+    target  => "${confdir}/keys.conf",
+    content => "# This file is managed by puppet - do not change! All changes will be lost\n",
+  }
+
+  concat::fragment { 'named-views-header':
+    order   => '00',
+    target  => "${confdir}/views.conf",
+    content => "# This file is managed by puppet - do not change! All changes will be lost\ns",
+  }
+
+  service { 'bind':
+    ensure     => running,
+    name       => $bind_service,
+    enable     => true,
+    hasrestart => true,
+    hasstatus  => true,
   }
 
 }
