@@ -1,0 +1,14 @@
+{
+  "name": "jonatnameneghetti-bind",
+  "version": "0.1.0",
+  "author": "jonatnameneghetti",
+  "summary": null,
+  "license": "Apache 2.0",
+  "source": "https://github.com/jonatanmenghetti/puppet-bind",
+  "issues_url": "https://github.com/jonatanmenghetti/puppet-bind/issues",
+  "project_page": "https://github.com/jonatanmenghetti/puppet-bind",
+  "dependencies": [
+    {"version_requirement":">= 1.0.0","name":"puppetlabs-stdlib"}
+  ]
+}
+

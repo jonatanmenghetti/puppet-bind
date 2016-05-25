@@ -1,0 +1,15 @@
+{
+  "uploadOnSave": false,
+  "useAtomicWrites": false,
+  "deleteLocal": false,
+  "hostname": "puppet",
+  "target": "/etc/puppet/modules/bind",
+  "ignore": [
+    ".remote-sync.json",
+    ".git/**"
+  ],
+  "username": "root",
+  "password": "hpxut6m",
+  "watch": [],
+  "transport": "scp"
+}
