@@ -68,9 +68,8 @@ with things. (We are working on automating this section!)
 This is where you list OS compatibility, version compatibility, etc.
 
 ## Development
-
-Since your module is awesome, other users will want to play with it. Let them
-know what the ground rules for contributing are.
+  This module is based on inkblot/puppet-bind module, ever great organization,
+  interesting functionalitys but very hard and confused to be configure for bindconfiguration and it's inspiration to remake this module.
 
 ## Release Notes/Contributors/Etc **Optional**
 
