@@ -8,7 +8,7 @@
   "issues_url": "https://github.com/jonatanmenghetti/puppet-bind/issues",
   "project_page": "https://github.com/jonatanmenghetti/puppet-bind",
   "dependencies": [
-    {"version_requirement":">= 1.0.0","name":"puppetlabs-stdlib"}
+    {"version_requirement":">= 1.0.0","name":"puppetlabs-stdlib"},
+    {"name":"puppetlabs/concat","version_requirement":">= 1.2.4"}
   ]
 }
-
