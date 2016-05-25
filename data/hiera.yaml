@@ -1,0 +1,5 @@
+:hierarchy:
+  - osfamily/%{::osfamily}/%{::operatingsystem}/%{lsbdistrelease}
+  - osfamily/%{::osfamily}/%{::operatingsystem}
+  - osfamily/%{::osfamily}
+  - common
