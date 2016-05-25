@@ -2,14 +2,13 @@
 #
 # Currently does nothing
 #
-class bind(
+class bind (
   $forwarders             = '',
-  $dnssec                 = false,
   $version                = '',
   $auth_nxdomain          = false,
   $include_local          = false,
   $include_default_zones  = true,
-){
+) inherits bind::defaults {
 
   package { 'bind':
     ensure => latest,
