@@ -58,7 +58,7 @@ class bind (
   concat::fragment { 'named-views-header':
     order   => '00',
     target  => "${confdir}/views.conf",
-    content => "# This file is managed by puppet - do not change! All changes will be lost\ns",
+    content => "# This file is managed by puppet - do not change! All changes will be lost\n",
   }
 
   service { 'bind':
