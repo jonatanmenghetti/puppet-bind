@@ -15,9 +15,16 @@ class bind (
     name   => $bind_package,
   }
 
+  file {"${confdir}":
+    ensure  => directory,
+    owner    => $bind_user,
+    mode    => 0644,
+  }
+
   file { "${confdir}/zones":
     ensure  => directory,
     mode    => '2755',
+    require => File["${confdir}"],
   }
 
   file { $namedconf:
@@ -61,5 +68,7 @@ class bind (
     hasrestart => true,
     hasstatus  => true,
   }
+
+
 
 }
